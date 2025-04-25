@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns="sap.m">
+    <html:div class="main-container">
+        <!-- 헤더 -->
+        <html:header class="header">
+            <html:img src="images/jmc-logo.png" alt="JMC Consulting" class="header-logo"/>
+            <html:div class="header-right">
+                <html:div class="notification-icon">
+                    <html:i class="fas fa-bell"></html:i>
+                </html:div>
+                <html:div class="user-profile">AB</html:div>
+            </html:div>
+        </html:header>
+
+        <!-- 메인 콘텐츠 영역 -->
+        <html:div class="content-wrapper">
+            <!-- 사이드바 -->
+            <html:nav class="sidebar">
+                <html:ul>
+                    <html:li class="menu-item">
+                        <html:i class="fas fa-home"></html:i>
+                        <html:span>홈</html:span>
+                    </html:li>
+                    <html:li class="menu-item active">
+                        <html:i class="fas fa-ticket-alt"></html:i>
+                        <html:span>티켓 관리</html:span>
+                    </html:li>
+                    <html:li class="submenu">
+                        <html:span>티켓 리스트</html:span>
+                    </html:li>
+                    <html:li class="submenu">
+                        <html:span>티켓 생성 조회</html:span>
+                    </html:li>
+                    <html:li class="submenu">
+                        <html:span>신규 티켓 생성</html:span>
+                    </html:li>
+                </html:ul>
+            </html:nav>
+
+            <!-- 메인 콘텐츠 -->
+            <html:main class="main-content">
+                <html:h1>티켓 리스트</html:h1>
+                
+                <!-- 필터 영역 -->
+                <html:div class="filter-container">
+                    <html:div class="filter-row">
+                        <html:div class="filter-item">
+                            <html:label>고객사 :</html:label>
+                            <html:select>
+                                <html:option>스터디스 시스템사업부</html:option>
+                            </html:select>
+                        </html:div>
+                        <html:div class="filter-item">
+                            <html:label>티켓 생성자 :</html:label>
+                            <html:select>
+                                <html:option>김 현민</html:option>
+                            </html:select>
+                        </html:div>
+                        <html:div class="filter-item">
+                            <html:label>티켓 생성일 :</html:label>
+                            <html:input type="date"/>
+                        </html:div>
+                        <html:div class="filter-item">
+                            <html:label>프로젝트명 :</html:label>
+                            <html:select>
+                                <html:option>전체</html:option>
+                            </html:select>
+                        </html:div>
+                        <html:div class="filter-item">
+                            <html:label>티켓 처리 담당자 :</html:label>
+                            <html:select>
+                                <html:option>전체</html:option>
+                            </html:select>
+                        </html:div>
+                    </html:div>
+                    <html:button class="search-button">검색</html:button>
+                </html:div>
+
+                <!-- 테이블 -->
+                <html:div class="table-container">
+                    <html:table>
+                        <html:thead>
+                            <html:tr>
+                                <html:th><html:input type="checkbox"/></html:th>
+                                <html:th>티켓 ID</html:th>
+                                <html:th>요청일</html:th>
+                                <html:th>티켓 생성자</html:th>
+                                <html:th>프로젝트명</html:th>
+                                <html:th>처리</html:th>
+                                <html:th>티켓 상태값</html:th>
+                                <html:th>AMS 담당자</html:th>
+                                <html:th>처리 유형</html:th>
+                                <html:th>상세</html:th>
+                            </html:tr>
+                        </html:thead>
+                        <html:tbody>
+                            <html:tr>
+                                <html:td><html:input type="checkbox"/></html:td>
+                                <html:td>T0000176</html:td>
+                                <html:td>2025/04/09</html:td>
+                                <html:td>김 현민</html:td>
+                                <html:td>스터디스 CRM 시스템 구축 AMS</html:td>
+                                <html:td>신규 계정 생성 요청</html:td>
+                                <html:td><html:span class="status-badge re-assigned">Re-Assigned</html:span></html:td>
+                                <html:td>정 혁목</html:td>
+                                <html:td>L2</html:td>
+                                <html:td><html:i class="fas fa-chevron-right detail-icon"></html:i></html:td>
+                            </html:tr>
+                            <!-- 추가 행들... -->
+                        </html:tbody>
+                    </html:table>
+                </html:div>
+            </html:main>
+        </html:div>
+    </html:div>
+</mvc:View> 

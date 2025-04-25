@@ -1,0 +1,329 @@
+/* Enter your custom styles here */
+.sapMTitle {
+    color: #333;
+}
+
+.sapMLabel {
+    font-weight: bold !important;
+}
+
+.sapMComboBox {
+    margin-bottom: 0.5rem;
+}
+
+.sapMTableTH {
+    background-color: #f5f6f7 !important;
+}
+
+.sapMListTblCell {
+    vertical-align: middle !important;
+}
+
+.sapMObjectStatusText {
+    font-weight: bold !important;
+}
+
+/* 상태값에 따른 색상 */
+.sapMObjectStatus.sapMObjectStatusSuccess {
+    background-color: #e8f5e9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.sapMObjectStatus.sapMObjectStatusWarning {
+    background-color: #fff3e0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.sapMObjectStatus.sapMObjectStatusInformation {
+    background-color: #e3f2fd;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* 테이블 행 호버 효과 */
+.sapMListTblRow:hover {
+    background-color: #f5f6f7 !important;
+}
+
+/* 검색 버튼 스타일 */
+#searchButton {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* 필터 영역 스타일 */
+#filterContainer {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 테이블 스타일 */
+#ticketTable {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 상세 버튼 스타일 */
+.sapMBtnIcon {
+    color: #0854a0 !important;
+}
+
+/* 체크박스 스타일 */
+.sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus:before {
+    border-color: #0854a0;
+}
+
+/* 전체 레이아웃 */
+.mainPage {
+    background-color: #ffffff;
+}
+
+/* 헤더 스타일 */
+.header {
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    height: 30px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.notification-icon {
+    color: #666;
+    font-size: 20px;
+}
+
+.user-profile {
+    width: 32px;
+    height: 32px;
+    background-color: #0854a0 !important;
+    color: white;
+    border-radius: 4px;
+}
+
+/* 콘텐츠 래퍼 */
+.content-wrapper {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px 0;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.menu-icon {
+    width: 20px;
+    color: #666;
+}
+
+.menu-item.active {
+    background-color: #f5f6f7;
+    color: #0854a0;
+}
+
+.menu-item.active .menu-icon {
+    color: #0854a0;
+}
+
+.submenu {
+    padding: 8px 20px 8px 50px;
+    color: #666;
+}
+
+.submenu:hover {
+    background-color: #f5f6f7;
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.content-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 필터 영역 */
+.filter-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filter-row {
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-item .sapMLabel {
+    font-weight: bold;
+    color: #333;
+}
+
+.search-button {
+    background-color: #0854a0;
+    color: white;
+    margin-top: 20px;
+}
+
+.search-button:hover {
+    background-color: #064483;
+}
+
+/* 테이블 스타일 */
+.ticket-table {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-table .sapMListTblHeader {
+    background-color: #f5f6f7;
+}
+
+.ticket-table .sapMListTblRow:hover {
+    background-color: #f5f6f7;
+}
+
+/* 상태 배지 */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status-badge .sapMObjStatusSuccess {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge .sapMObjStatusWarning {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.status-badge .sapMObjStatusInformation {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+/* 상세 버튼 */
+.detail-button {
+    color: #0854a0;
+}
+
+/* 27인치 모니터 최적화 */
+@media screen and (min-width: 2560px) {
+    .main-content {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+    
+    .filter-row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+}
+
+/* View3 Styles */
+#page3 {
+    background-color: #ffffff;
+}
+
+#mainContainer {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#pageTitle {
+    font-size: 1.25rem;
+    color: #333333;
+}
+
+#mainSearch {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+#salesOrderTable {
+    border: none;
+    box-shadow: none;
+}
+
+.sapMListTblHeader {
+    background-color: #ffffff;
+}
+
+.sapMListTblHeaderCell {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sapMListTblCell {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Link styling */
+.sapMLnk {
+    color: #0854a0;
+}
+
+/* Checkbox styling */
+.sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus:before {
+    border-color: #0854a0;
+}
+
+/* Table row hover effect */
+.sapMLIB.sapMLIBSelected,
+.sapMLIB.sapMLIBSelected > td {
+    background-color: #f5f6f7;
+}
+
+/* Navigation button styling */
+.sapMBtnIcon {
+    color: #0854a0;
+}
+
+/* 27인치 모니터 최적화 */
+@media screen and (min-width: 2560px) {
+    #mainContainer {
+        max-width: 2000px;
+    }
+}

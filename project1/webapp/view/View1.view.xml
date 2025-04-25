@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="page1" title="티켓 리스트" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <VBox id="filterContainer" class="sapUiSmallMargin">
+                <layout:Grid id="filterGrid" defaultSpan="XL2 L3 M4 S12" hSpacing="0.5" containerQuery="true">
+                    <Label id="customerLabel" text="고객사 :" design="Bold" class="sapUiTinyMarginTop"/>
+                    <ComboBox id="customerCombo" width="100%" items="{/customers}">
+                        <core:Item id="customerItem" key="{key}" text="{text}"/>
+                    </ComboBox>
+                    
+                    <Label id="creatorLabel" text="티켓 생성자 :" design="Bold" class="sapUiTinyMarginTop"/>
+                    <ComboBox id="creatorCombo" width="100%" items="{/creators}">
+                        <core:Item id="creatorItem" key="{key}" text="{text}"/>
+                    </ComboBox>
+                    
+                    <Label id="dateLabel" text="티켓 생성일 :" design="Bold" class="sapUiTinyMarginTop"/>
+                    <DateRangeSelection id="createDateRange" width="100%"/>
+                    
+                    <Label id="projectLabel" text="프로젝트명 :" design="Bold" class="sapUiTinyMarginTop"/>
+                    <ComboBox id="projectCombo" width="100%" items="{/projects}">
+                        <core:Item id="projectItem" key="{key}" text="{text}"/>
+                    </ComboBox>
+                    
+                    <Label id="assigneeLabel" text="티켓 처리 담당자 :" design="Bold" class="sapUiTinyMarginTop"/>
+                    <ComboBox id="assigneeCombo" width="100%" items="{/assignees}">
+                        <core:Item id="assigneeItem" key="{key}" text="{text}"/>
+                    </ComboBox>
+                </layout:Grid>
+                <Button id="searchButton" text="검색" type="Emphasized" press=".onSearch" class="sapUiTinyMarginTop"/>
+            </VBox>
+
+            <Table id="ticketTable"
+                items="{/tickets}"
+                sticky="ColumnHeaders"
+                mode="SingleSelectMaster"
+                class="sapUiSmallMargin">
+                <columns>
+                    <Column id="checkColumn" width="4rem">
+                        <Text id="checkText" text="체크"/>
+                    </Column>
+                    <Column id="ticketIdColumn" width="8rem">
+                        <Text id="ticketIdText" text="티켓 ID"/>
+                    </Column>
+                    <Column id="dateColumn" width="8rem">
+                        <Text id="dateText" text="요청일"/>
+                    </Column>
+                    <Column id="creatorColumn" width="8rem">
+                        <Text id="creatorText" text="티켓 생성자"/>
+                    </Column>
+                    <Column id="projectColumn" width="20rem">
+                        <Text id="projectText" text="프로젝트명"/>
+                    </Column>
+                    <Column id="statusColumn" width="8rem">
+                        <Text id="statusText" text="처리"/>
+                    </Column>
+                    <Column id="ticketStatusColumn" width="8rem">
+                        <Text id="ticketStatusText" text="티켓 상태값"/>
+                    </Column>
+                    <Column id="assigneeColumn" width="8rem">
+                        <Text id="assigneeText" text="AMS 담당자"/>
+                    </Column>
+                    <Column id="typeColumn" width="8rem">
+                        <Text id="typeText" text="처리 유형"/>
+                    </Column>
+                    <Column id="detailColumn" width="4rem">
+                        <Text id="detailText" text="상세"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="ticketListItem" type="Active" press=".onTicketPress">
+                        <cells>
+                            <CheckBox id="rowCheckBox" selected="{selected}"/>
+                            <Text id="rowTicketId" text="{ticketId}"/>
+                            <Text id="rowDate" text="{createDate}"/>
+                            <Text id="rowCreator" text="{creator}"/>
+                            <Text id="rowProject" text="{projectName}"/>
+                            <Text id="rowStatus" text="{status}"/>
+                            <ObjectStatus id="rowTicketStatus"
+                                text="{ticketStatus}"
+                                state="{= ${ticketStatus} === 'Done' ? 'Success' : ${ticketStatus} === 'Re-Assigned' ? 'Warning' : 'Information'}"/>
+                            <Text id="rowAssignee" text="{assignee}"/>
+                            <Text id="rowType" text="{type}"/>
+                            <Button id="rowDetailButton" icon="sap-icon://navigation-right-arrow" type="Transparent" press=".onDetailPress"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

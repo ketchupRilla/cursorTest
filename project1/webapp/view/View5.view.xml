@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="project1.controller.View5"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page5" title="View 5" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <VBox id="view5Container" alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                <Title id="view5Title" text="This is View 5" class="sapUiSmallMarginBottom"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View> 

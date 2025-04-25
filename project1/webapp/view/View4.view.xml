@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="project1.controller.View4"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page4" showHeader="false">
+        <content>
+            <core:HTML id="view4HTML" content='
+                &lt;div class="sales-container"&gt;
+                    &lt;div class="sales-header"&gt;
+                        &lt;h1&gt;Sales Orders (15)&lt;/h1&gt;
+                        &lt;div class="search-box"&gt;
+                            &lt;input type="text" placeholder="Typed Text" class="search-input"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class="table-wrapper"&gt;
+                        &lt;table class="sales-table"&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th class="checkbox-col"&gt;
+                                        &lt;input type="checkbox" id="selectAll" onchange="onSelectAllChange(this)"&gt;
+                                    &lt;/th&gt;
+                                    &lt;th&gt;Link&lt;/th&gt;
+                                    &lt;th&gt;Document Number&lt;/th&gt;
+                                    &lt;th&gt;Company&lt;/th&gt;
+                                    &lt;th&gt;City&lt;/th&gt;
+                                    &lt;th&gt;Contact Person&lt;/th&gt;
+                                    &lt;th&gt;Posting Date&lt;/th&gt;
+                                    &lt;th&gt;Amount&lt;/th&gt;
+                                    &lt;th&gt;Currency&lt;/th&gt;
+                                    &lt;th class="arrow-col"&gt;&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;&lt;input type="checkbox" class="row-checkbox"&gt;&lt;/td&gt;
+                                    &lt;td&gt;&lt;a href="#" class="link-text"&gt;Link&lt;/a&gt;&lt;/td&gt;
+                                    &lt;td&gt;Joiega&lt;/td&gt;
+                                    &lt;td&gt;Erie, PL9 8AT&lt;/td&gt;
+                                    &lt;td&gt;Wilma Kopp&lt;/td&gt;
+                                    &lt;td&gt;02/26/2024&lt;/td&gt;
+                                    &lt;td&gt;19,503.26&lt;/td&gt;
+                                    &lt;td&gt;19,503.26&lt;/td&gt;
+                                    &lt;td&gt;EUR&lt;/td&gt;
+                                    &lt;td&gt;&lt;button class="arrow-btn"&gt;→&lt;/button&gt;&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;&lt;input type="checkbox" class="row-checkbox"&gt;&lt;/td&gt;
+                                    &lt;td&gt;&lt;a href="#" class="link-text"&gt;Link&lt;/a&gt;&lt;/td&gt;
+                                    &lt;td&gt;Exotic Liquids&lt;/td&gt;
+                                    &lt;td&gt;Edinburg, GU31 6QQ&lt;/td&gt;
+                                    &lt;td&gt;Elaine Wyman&lt;/td&gt;
+                                    &lt;td&gt;02/26/2024&lt;/td&gt;
+                                    &lt;td&gt;33,620.26&lt;/td&gt;
+                                    &lt;td&gt;33,620.26&lt;/td&gt;
+                                    &lt;td&gt;KRW&lt;/td&gt;
+                                    &lt;td&gt;&lt;button class="arrow-btn"&gt;→&lt;/button&gt;&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;style&gt;
+                    .sales-container {
+                        max-width: 2000px;
+                        margin: 0 auto;
+                        padding: 2rem;
+                        background-color: #ffffff;
+                        font-family: "72", "72full", Arial, Helvetica, sans-serif;
+                    }
+
+                    .sales-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                    }
+
+                    .sales-header h1 {
+                        font-size: 1.25rem;
+                        font-weight: normal;
+                        color: #333333;
+                        margin: 0;
+                    }
+
+                    .search-box {
+                        position: relative;
+                    }
+
+                    .search-input {
+                        width: 20rem;
+                        padding: 0.5rem;
+                        border: 1px solid #e5e5e5;
+                        border-radius: 4px;
+                        font-size: 0.875rem;
+                    }
+
+                    .table-wrapper {
+                        width: 100%;
+                        overflow-x: auto;
+                    }
+
+                    .sales-table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        font-size: 0.875rem;
+                        background-color: #ffffff;
+                    }
+
+                    .sales-table th,
+                    .sales-table td {
+                        padding: 1rem;
+                        text-align: left;
+                        border-bottom: 1px solid #e5e5e5;
+                    }
+
+                    .sales-table th {
+                        font-weight: normal;
+                        color: #333333;
+                    }
+
+                    .sales-table tr:hover {
+                        background-color: #f5f6f7;
+                    }
+
+                    .checkbox-col {
+                        width: 3rem;
+                    }
+
+                    .arrow-col {
+                        width: 3rem;
+                    }
+
+                    input[type="checkbox"] {
+                        width: 1rem;
+                        height: 1rem;
+                        cursor: pointer;
+                    }
+
+                    .link-text {
+                        color: #0854a0;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+
+                    .link-text:hover {
+                        text-decoration: underline;
+                    }
+
+                    .arrow-btn {
+                        background: none;
+                        border: none;
+                        color: #0854a0;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        padding: 0.25rem 0.5rem;
+                    }
+
+                    .arrow-btn:hover {
+                        background-color: #f0f0f0;
+                        border-radius: 4px;
+                    }
+
+                    /* Column widths */
+                    .sales-table th:nth-child(1), .sales-table td:nth-child(1) { width: 3rem; }
+                    .sales-table th:nth-child(2), .sales-table td:nth-child(2) { width: 8rem; }
+                    .sales-table th:nth-child(3), .sales-table td:nth-child(3) { width: 10rem; }
+                    .sales-table th:nth-child(4), .sales-table td:nth-child(4) { width: 12rem; }
+                    .sales-table th:nth-child(5), .sales-table td:nth-child(5) { width: 10rem; }
+                    .sales-table th:nth-child(6), .sales-table td:nth-child(6) { width: 12rem; }
+                    .sales-table th:nth-child(7), .sales-table td:nth-child(7) { width: 8rem; }
+                    .sales-table th:nth-child(8), .sales-table td:nth-child(8) { width: 8rem; }
+                    .sales-table th:nth-child(9), .sales-table td:nth-child(9) { width: 6rem; }
+                    .sales-table th:nth-child(10), .sales-table td:nth-child(10) { width: 3rem; }
+
+                    @media screen and (min-width: 2560px) {
+                        .sales-container {
+                            max-width: 2000px;
+                        }
+                    }
+                &lt;/style&gt;
+
+                &lt;script&gt;
+                    function onSelectAllChange(checkbox) {
+                        var rowCheckboxes = document.querySelectorAll(".row-checkbox");
+                        rowCheckboxes.forEach(function(rowCheckbox) {
+                            rowCheckbox.checked = checkbox.checked;
+                        });
+                    }
+                &lt;/script&gt;
+            '>
+            </core:HTML>
+        </content>
+    </Page>
+</mvc:View> 

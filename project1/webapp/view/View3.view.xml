@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="project1.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m"
+    displayBlock="true"
+    height="100%">
+    <Page id="page3" showHeader="false">
+        <content>
+            <VBox id="mainContainer" class="sapUiSmallMargin">
+                <!-- Header Area with Title and Search -->
+                <HBox id="headerBox" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMarginBottom">
+                    <Title id="pageTitle" text="Sales Orders (15)" level="H1"/>
+                    <SearchField id="mainSearch" width="20rem" placeholder="Typed Text"/>
+                </HBox>
+
+                <!-- Table -->
+                <Table
+                    id="salesOrderTable"
+                    items="{/salesOrders}"
+                    sticky="ColumnHeaders"
+                    class="sapUiSmallMarginBottom">
+                    <columns>
+                        <Column id="checkboxColumn" width="3rem">
+                            <CheckBox id="selectAllCheckbox" select=".onSelectAll"/>
+                        </Column>
+                        <Column id="linkColumn">
+                            <Text id="linkColumnHeader" text="Link"/>
+                        </Column>
+                        <Column id="documentNumberColumn">
+                            <Text id="documentNumberHeader" text="Document Number"/>
+                        </Column>
+                        <Column id="companyColumn">
+                            <Text id="companyHeader" text="Company"/>
+                        </Column>
+                        <Column id="cityColumn">
+                            <Text id="cityHeader" text="City"/>
+                        </Column>
+                        <Column id="contactPersonColumn">
+                            <Text id="contactPersonHeader" text="Contact Person"/>
+                        </Column>
+                        <Column id="postingDateColumn">
+                            <Text id="postingDateHeader" text="Posting Date"/>
+                        </Column>
+                        <Column id="amountColumn">
+                            <Text id="amountHeader" text="Amount"/>
+                        </Column>
+                        <Column id="currencyColumn">
+                            <Text id="currencyHeader" text="Currency"/>
+                        </Column>
+                        <Column id="navigationColumn" width="3rem">
+                            <core:Icon id="navigationIcon" src="sap-icon://navigation-right-arrow"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="salesOrderListItem" type="Active">
+                            <cells>
+                                <CheckBox id="rowCheckbox"/>
+                                <Link id="rowLink" text="Link" emphasized="true"/>
+                                <Text id="rowDocumentNumber" text="{DocumentNumber}"/>
+                                <Text id="rowCompany" text="{Company}"/>
+                                <Text id="rowCity" text="{City}"/>
+                                <Text id="rowContactPerson" text="{ContactPerson}"/>
+                                <Text id="rowPostingDate" text="{PostingDate}"/>
+                                <Text id="rowAmount" text="{Amount}"/>
+                                <Text id="rowCurrency" text="{Currency}"/>
+                                <Button id="rowNavigationButton" icon="sap-icon://navigation-right-arrow" type="Transparent"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View> 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:View
+    controllerName="project1.controller.NavPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="navPage" title="Navigation Page">
+        <content>
+            <VBox id="navButtonsContainer" alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                <Button id="nav1" text="1" press=".onNav1Press" width="200px" class="sapUiSmallMarginBottom"/>
+                <Button id="nav2" text="2" press=".onNav2Press" width="200px" class="sapUiSmallMarginBottom"/>
+                <Button id="nav3" text="3" press=".onNav3Press" width="200px" class="sapUiSmallMarginBottom"/>
+                <Button id="nav4" text="4" press=".onNav4Press" width="200px" class="sapUiSmallMarginBottom"/>
+                <Button id="nav5" text="5" press=".onNav5Press" width="200px" class="sapUiSmallMarginBottom"/>
+                <Button id="nav6" text="6" press=".onNav6Press" width="200px" class="sapUiSmallMarginBottom"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View> 
